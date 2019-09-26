@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Redirect index to the parking as it is the true homepage
-    path('', lambda request: redirect('/parking/', permanent=False)),    
+    path('', lambda request: redirect('/parking/', permanent=True)),    
     # Parking App
     path('parking/', include('parking.urls')),
 
