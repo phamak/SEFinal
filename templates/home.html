@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-    <p style="color: blue"> hopefully this works </p>
-</div>
+<main>
+    <div class="title">
+        <p>
+            Home
+        </p>
+    </div>
+    <div class="container1">
+        <p>
+            <img class="parking" src="{{ STATIC_URL }} /static/images/parkinglot.png" alt="Parking Lot" height=100% width=100%>
+            
+            <img id="A3" src="{{ STATIC_URL }} /static/images/A3.png" alt="A3">
+            <img id="A6" src="{{ STATIC_URL }} /static/images/A6.png" alt="A6">
+            
+            <img id="D2" src="{{ STATIC_URL }} /static/images/D2.png" alt="D2">
+            <img id="D5" src="{{ STATIC_URL }} /static/images/D5.png" alt="D5">
+            <img id="D12" src="{{ STATIC_URL }} /static/images/D12.png" alt="D12">
+        </p>
+    </div>
+</main>
 {% endblock %}

@@ -14,38 +14,49 @@
 
   <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL}} /static/images/icon.jpg">
 
   <!-- JQuery ------------------------------------------------ -->
   <script type="text/javascript" src="{{ STATIC_URL }} /static/js/jquery-3.4.0.js"></script> 
 
   <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-  <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
-  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <!--link rel="stylesheet" href="{% static 'css/normalize.css' %}"-->
+  <!--link rel="stylesheet" href="{% static 'css/skeleton.css' %}"-->
+  <!--link rel="stylesheet" href="{% static 'css/navbar.css' %}"-->
+  <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 
   <!-- JS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 </head>
 
-<body style="background-color: #f9fafc;">
+<body>
 
   <!-- Navbar ---------------------------------------------- -->
     <div class="nav">
-        <input type="checkbox" id="nav-check">
         <div class="nav-header">
-          <div class="nav-title">
-            MemeVille
-          </div>
+            <img src="{{ STATIC_URL}} /static/images/logo.png" alt="logo" height=120 width=100%>
         </div>
         
         <!-- Navbar links-->
         <div class="nav-links">
           <a href="//github.com/jakesboy2" target="_blank">Github</a>
+          <a href="home.html">Home</a>
+          <a href="map.html">Map</a>
+          <a href="contact.html">Contact Us</a>
         </div>
     </div>
-    <h1>another test</h1>
   <!-- Content that child html files supply-->
   {% block content %}
   {% endblock %}
+  <!--************************* Footer ************************-->
+	<footer>
+      <br>Copyright © 2019 UCO<br>
+      <script>
+        document.write("<p>This document was last modified on: ");
+        document.write(document.lastModified);
+        document.write("<p>");
+      </script>
+    </footer>
 </body>
 </html>
