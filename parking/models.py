@@ -13,6 +13,7 @@ class ParkingSpot(models.Model):
         app_label = 'parking'
 
     # The status of the parking spot
+    id = models.AutoField(primary_key=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES)
 
     # model methods
@@ -21,11 +22,3 @@ class ParkingSpot(models.Model):
             'id': self.id,
             'status': self.status
         }
-    
-    # update the status of the parking spot
-    def update_status(self, new_status, *args, **kwargs):
-        self.status = new_status
-        super(ParkingSpot, self).save(*args, **kwargs)
-
-    def get_status(self):
-        return self.status
