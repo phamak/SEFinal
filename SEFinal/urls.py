@@ -11,7 +11,7 @@ urlpatterns = [
     # Redirect index to the parking as it is the true homepage
     path('', lambda request: redirect('/parking/', permanent=True)),    
     # Parking App
-    path('parking/', include('parking.urls')),
+    path('parking/', include('parking.urls'))
 
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
