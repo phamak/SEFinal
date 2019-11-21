@@ -1,32 +1,42 @@
 
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <section id="section1">
   <br>
-  <div class="container">
+     <div class="container">
         <div class="row">
         
             <h1> Need Directions?</h1>
-            <form>
+            <form id="directionForm">
                 <div class="row">
-                    <div class="twelve columns">
-                        <label for="exampleEmailInput">Your Address</label>
-                        <input class="u-full-width" type="text" placeholder="1234 NW Example St" id="addressInput">
+                    <div class="six columns">
+                        <label for="exampleEmailInput">Latitude</label>
+                        <input class="u-full-width" type="text" placeholder="35.392843" id="lat">
                     </div>
                     <div class="six columns">
+                        <label for="long">Longitude</label>
+                        <input class="u-full-width" type="text" placeholder="-97.393842" id="long">
+                    </div>
                 </div>
                 <div class="row">
                     <input class="button-primary" type="submit" value="Submit">
                 </div>
             </form>
+        </div>
 
-        <!-- AIzaSyC5bGCr0TL3tXZCCiccLx6pTBnn0G9KO4M -->
-        <!-- https://maps.googleapis.com/maps/api/directions/json?
-origin=Toronto&destination=Montreal
-&key=YOUR_API_KEY   -->
+        <div class="row">
+            <div id="map">
+                <ol id="directionList">
 
-      </div>
-  </div>
+                </ol>
+            </div>
+        </div>
+        
+    </div>
 </section>
+
+<!-- 26942361-2cf9-46ec-84e8-992443d9c724 -->
+<script src="https://cdn.jsdelivr.net/npm/graphhopper-js-api-client/dist/graphhopper-client.js"></script>
+<script type="text/javascript" src="{% static 'js/directions.js' %}"></script>
 {% endblock %}
