@@ -14,3 +14,8 @@ def index(request):
     app_url = request.path
     return render(request, 'home.html', {'app_url': app_url})
 
+# Render the directions page
+def directions(request):
+    app_url = request.path
+    return render(request, 'directions.html', {'app_url': app_url})
+

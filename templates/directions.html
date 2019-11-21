@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="section1">
+  <br>
+  <div class="container">
+        <div class="row">
+        
+            <h1> Need Directions?</h1>
+            <form>
+                <div class="row">
+                    <div class="twelve columns">
+                        <label for="exampleEmailInput">Your Address</label>
+                        <input class="u-full-width" type="text" placeholder="1234 NW Example St" id="addressInput">
+                    </div>
+                    <div class="six columns">
+                </div>
+                <div class="row">
+                    <input class="button-primary" type="submit" value="Submit">
+                </div>
+            </form>
+
+        <!-- AIzaSyC5bGCr0TL3tXZCCiccLx6pTBnn0G9KO4M -->
+        <!-- https://maps.googleapis.com/maps/api/directions/json?
+origin=Toronto&destination=Montreal
+&key=YOUR_API_KEY   -->
+
+      </div>
+  </div>
+</section>
+{% endblock %}
