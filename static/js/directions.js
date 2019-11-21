@@ -14,8 +14,8 @@ function getDirections(lat, long) {
         elevation: false
     });
 
-    ghRouting.addPoint(new GHInput(35.654579, -97.469490));
     ghRouting.addPoint(new GHInput(lat, long));
+    ghRouting.addPoint(new GHInput(35.654579, -97.469490));
 
     ghRouting.doRequest()
     .then(function(json) {
